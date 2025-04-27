@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+      }
+
+      .sidebar {
+        width: 220px;
+        background-color: palevioletred;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        color: white;
+        z-index: 1000;
+      }
+
+      .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin: 15px 0;
+        font-weight: bold;
+      }
+
+      .sidebar a:hover {
+        text-decoration: underline;
+      }
+
+      .main-content {
+        margin-left: 220px;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        background: white;
+        padding: 20px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h2 {
+        color: black;
+        border-bottom: 2px solid palevioletred;
+        padding-bottom: 5px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      ul li {
+        background: pink;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+      }
+
+      ul li i {
+        margin-right: 10px;
+        color: palevioletred;
+      }
+
+      .exercise-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px 0;
+      }
+
+      .exercise-list li {
+        list-style: none;
+        background: palevioletred;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .exercise-list li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .exercise-list li a:hover {
+        color: whitesmoke;
+      }
+
+      .back-home {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: palevioletred;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      .back-home:hover {
+        background-color: lightgrey;
+      }
+
+      .profile-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          display: none;
+        }
+        .main-content {
+          margin-left: 0;
+        }
+      }
+
+      .sidebar a.active {
+        background-color: white;
+        color: palevioletred;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="#about">Trang Chủ</a>
+      <a href="#info">Thông tin</a>
+      <a href="#skills">Kỹ năng</a>
+      <a href="#baitap">Bài tập</a>
+      <a href="#contact">Liên hệ</a>
+    </div>
+
+    <div class="main-content">
+      <section id="about" class="fade-in">
+        <div class="container">
+          <p>Chào mừng đến với trang cá nhân của tôi!</p>
+          <img
+            src="https://scontent-hkg1-1.xx.fbcdn.net/v/t39.30808-6/492199681_716215177411300_7635137646796806773_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tgwN4VvDcBIQ7kNvwGwo0qr&_nc_oc=Adk_SJtSoZmoM2OqMsEiv61zpi7UjOPqPCppCYNaHefPnWNyN0goGri5PugIQxPhD88&_nc_zt=23&_nc_ht=scontent-hkg1-1.xx&_nc_gid=12asM9s4DxjSdb60Z-WIJg&oh=00_AfE4zpeXhKqmGhg7zPS7s3g3liIEiXRFwIZ1H6WsSC_B8A&oe=680FB944"
+            alt="Ảnh cá nhân"
+            class="profile-img"
+          />
+        </div>
+      </section>
+
+      <section id="info" class="fade-in">
+        <div class="container">
+          <h2>Giới Thiệu</h2>
+          <p><strong>Tên:</strong> Nguyễn Thị Trang</p>
+          <p><strong>Lớp:</strong> CNTT D2024B</p>
+          <p><strong>Sở thích:</strong> Xem phim, ngủ</p>
+        </div>
+      </section>
+
+      <section id="skills" class="fade-in">
+        <div class="container">
+          <h2>Kỹ năng</h2>
+          <ul>
+            <li>
+              <i class="fas fa-code"></i> Đang học hỏi tiến bộ dần về HTML, CSS
+              và JavaScript
+            </li>
+            <li>
+              <i class="fas fa-paint-brush"></i> Thiết kế giao diện cơ bản
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="baitap" class="fade-in">
+        <div class="container">
+          <h2>Bài tập</h2>
+          <h4>Buổi 8</h4>
+          <ul class="exercise-list">
+            <li><a href="b1b8 lop.html">bai1</a></li>
+            <li><a href="b1b8 lớp.html">bai1</a></li>
+
+            <li><a href="b2b8.html">bai2</a></li>
+            <li><a href="b3b8.html">bai3</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="fade-in">
+        <div class="container">
+          <h2>Liên hệ</h2>
+          <p><strong>Email:</strong> nguynchang06@gmail.com</p>
+          <p><strong>SĐT:</strong> 0368835206</p>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".sidebar a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
